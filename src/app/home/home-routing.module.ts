@@ -4,6 +4,11 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/lifeCameraEvents',
+    pathMatch: 'full',
+  },
+  {
     path: 'lifeCameraEvents',
     component: HomeComponent,
   },
