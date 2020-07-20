@@ -1,0 +1,22 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+/*Color themeing*/
+$life-camera-events-primary: mat-palette($mat-grey, 900);
+$life-camera-events-accent: mat-palette($mat-red, 600);
+
+$life-camera-events-theme: mat-dark-theme(
+  $life-camera-events-primary,
+  $life-camera-events-accent,
+);
+
+@include angular-material-theme($life-camera-events-theme);
+
+/*Typograhy setting*/
+$life-camera-events-typography: mat-typography-config(
+  $font-family: "Open Sans, sans-serif",
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500),
+);
+
+@include angular-material-typography($life-camera-events-typography);
