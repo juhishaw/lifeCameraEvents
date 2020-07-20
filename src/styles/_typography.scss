@@ -5,3 +5,12 @@
   @include font-mixin(30px, $nav-link, 600, 34px);
   @include letter-spacing(0);
 }
+.section-title {
+  font-family: "Kalam", cursive;
+  @include font-mixin(30px, $white, 600, 34px);
+  @include letter-spacing(0);
+}
+.section-sub-title {
+  @include font-mixin(18px, $white, 400, 24px);
+  @include letter-spacing(0);
+}

@@ -5,6 +5,7 @@
 :host ::ng-deep owl-carousel-o {
   .owl-carousel.owl-theme.owl-loaded.owl-responsive {
     .owl-stage-outer {
+        height: 860px;
       owl-stage {
         div {
           .owl-stage {
@@ -14,7 +15,6 @@
               .image-container {
                 height: inherit;
                 width: inherit;
-                // background: $grey-900;
                 @include d-flex {
                   justify-content: getJustify(c);
                   align-items: getAlign(c);

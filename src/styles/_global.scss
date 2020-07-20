@@ -19,3 +19,23 @@ select:-webkit-autofill:focus {
   @include letter-spacing(0);
 }
 
+@import "./variables";
+@import "./mixins";
+@import "./typography";
+
+.section-wrapper {
+  background: $red-A700;
+  padding: 50px;
+  margin-bottom: 20px;
+  @include d-flex {
+    justify-content: getJustify(c);
+    align-items: getAlign(c);
+  }
+  flex-direction: column;
+  .title {
+    @extend .section-title;
+  }
+  .sub-title {
+    @extend .section-sub-title;
+  }
+}
