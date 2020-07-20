@@ -1,1 +1,17 @@
-<p>slider works!</p>
+<div class="slider-wrapper">
+    <owl-carousel-o [options]="customOptions" #owlCar>
+        <ng-container *ngFor="let slide of slidesStore">
+          <ng-template carouselSlide [id]="slide.id">
+            <div class="image-container">
+              <div class="image">
+                <img [src]="slide.src" [alt]="slide.alt" />
+              </div>
+            </div>
+            <div class="dummy-3"></div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+      
+      <div class="icon-circle-left" (click)="owlCar.next()"></div>
+      <div class="icon-circle-right" (click)="owlCar.prev()"></div>
+</div>

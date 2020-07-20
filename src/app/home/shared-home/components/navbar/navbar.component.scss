@@ -1,0 +1,98 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/typography";
+
+.navbar-wrapper {
+  @include d-flex {
+    justify-content: getJustify(sb);
+    align-items: getAlign(c);
+  }
+  flex-direction: column;
+  padding: 20px;
+  .logo {
+    background: url("../../../../../assets/images/logo.png");
+    height: 120px;
+    width: 145px;
+    background-size: cover;
+  }
+  .nav-list {
+    @include d-flex {
+      justify-content: getJustify(fs);
+      align-items: getAlign(c);
+    }
+    position: relative;
+    padding: 10px;
+    li {
+      font-family: "Dancing Script", cursive;
+      @extend .nav-link;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      &.hover {
+        margin: 0 auto;
+        padding: 0;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          width: 0px;
+          height: 2px;
+          margin: 5px 0 0;
+          transition: all 0.2s ease-in-out;
+          transition-duration: 0.2s;
+          opacity: 0;
+          background-color: darken($red-700, 5%);
+        }
+        &:before {
+          left: 0;
+        }
+        &:after {
+          right: 0;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+        &.hover {
+          &:before,
+          &:after {
+            width: 100%;
+            opacity: 1;
+          }
+          &:before,
+          &:after {
+            width: 50%;
+          }
+        }
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+      &:first-child {
+        margin-left: 10px;
+      }
+      &:last-child {
+        margin-right: 10px;
+      }
+    }
+    &::before {
+      content: "";
+      height: 1px;
+      width: 50px;
+      background-color: $red-500;
+    }
+    &::after {
+      content: "";
+      height: 1px;
+      width: 50px;
+      background-color: $red-500;
+    }
+  }
+}

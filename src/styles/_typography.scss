@@ -1,0 +1,7 @@
+@import "./variables";
+@import "./mixins";
+
+.nav-link {
+  @include font-mixin(30px, $nav-link, 600, 34px);
+  @include letter-spacing(0);
+}

@@ -10,6 +10,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SliderComponent } from './components/slider/slider.component';
     GalleryComponent,
     SliderComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, CarouselModule],
   exports: [
     NavbarComponent,
     FooterComponent,
